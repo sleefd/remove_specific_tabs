@@ -1,0 +1,13 @@
+{
+	"name": "remove_tabs",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "first plugin learn from web",
+	"browser_action": {
+		"default_icon": "resource/icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions":[
+		"tabs"
+	]
+}
