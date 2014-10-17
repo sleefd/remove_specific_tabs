@@ -21,7 +21,8 @@ function onclick(){
 function removeTab(tab){ //remove tab according to title or url match of tabs
 	var url = tab.url;
 	var title = tab.title;
-	if(url.indexOf(value) != -1 || title.indexOf(value) != -1){
+	var  regExp = new RegExp(value, "i");
+	if(regExp.test(url) || regExp.test(title)){
 		chrome.tabs.remove(tab.id);
 	}
 }
