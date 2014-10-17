@@ -12,15 +12,15 @@ function onclick(){
 	for(var i = 0 ;i < tabs.length;  ++i)
 	{
 		var tab = tabs[i];
-		var url = tab.url;
-		console.log("url %s", url);
-		removeTab(url, tab);
+		removeTab(tab);
 
 	}
 
 }
-function removeTab(something, tab){
-	if(something.indexOf(value) != -1){
+function removeTab(tab){ //remove tab according to title or url match of tabs
+	var url = tab.url;
+	var title = tab.title;
+	if(url.indexOf(value) != -1 || title.indexOf(value) != -1){
 		chrome.tabs.remove(tab.id);
 	}
 }
