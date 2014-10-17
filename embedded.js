@@ -17,6 +17,7 @@ function onclick(){
 	}
 
 }
+
 function removeTab(tab){ //remove tab according to title or url match of tabs
 	var url = tab.url;
 	var title = tab.title;
